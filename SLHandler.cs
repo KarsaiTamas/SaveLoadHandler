@@ -102,4 +102,14 @@ public static class SLHandler
             return defaultData;
         }
     }
+    
+    /// <summary>
+    /// <br>Always be cautious when you delete files. Make sure everything is right when you decide to delete something.</br>
+    /// <br>Deletes a json save file from the path's location</br>
+    /// </summary>
+    /// <param name="saveName">Name of the file which we want to delete</param>
+    public static void DeleteSaveSlot(string saveName)
+    {
+        File.Delete(path + saveName + ".json");
+    }
 }
