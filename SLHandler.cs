@@ -110,6 +110,13 @@ public static class SLHandler
     /// <param name="saveName">Name of the file which we want to delete</param>
     public static void DeleteSaveSlot(string saveName)
     {
-        File.Delete(path + saveName + ".json");
+        try
+        {
+            File.Delete(path + saveName + ".json");
+        }
+        catch (IOException)
+        {
+            throw;
+        }
     }
 }
